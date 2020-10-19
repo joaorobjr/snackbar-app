@@ -1,0 +1,44 @@
+{
+  "name": "snackbar-app",
+  "version": "1.0.0",
+  "description": "Management System for Snack Bars",
+  "main": "./src/server/server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaorobjr/snackbar-app.git"
+  },
+  "keywords": [
+    "management",
+    "snackbar",
+    "node",
+    "angular",
+    "mongodb",
+    "express"
+  ],
+  "author": "Robson Teixeira",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/joaorobjr/snackbar-app/issues"
+  },
+  "homepage": "https://github.com/joaorobjr/snackbar-app#readme",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.8",
+    "@types/mongoose": "^5.7.36",
+    "@types/node": "^14.11.8",
+    "nodemon": "^2.0.5"
+  }
+}
