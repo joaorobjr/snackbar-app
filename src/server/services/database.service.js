@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import logger from './logger.service.js';
-import settings from '../config/config.js';
+import settings from '../config/settings.js';
 
 const options = {
   autoIndex: false,
@@ -10,17 +10,14 @@ const options = {
   useUnifiedTopology: true,
 };
 
-const connectDB = async () => {
+async function connectDB() {
   try {
-    logger.debug('MongoDB connection with retry');
     await mongoose.connect(`mongodb://${settings.dbUrl}`, options);
-    logger.info('MongoDB is connected');
+    logger.info('MongoDB connection successful');
   } catch (error) {
     logger.error('MongoDB connection unsuccessful, retry after 5 seconds.');
     setTimeout(connectDB, 5000);
   }
-};
+}
 
-connectDB();
-
-export default mongoose;
+export default { connectDB };
